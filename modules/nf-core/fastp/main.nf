@@ -37,7 +37,6 @@ process FASTP {
         [ ! -f  ${prefix}.fastq.gz ] && ln -sf $reads ${prefix}.fastq.gz
 
         fastp \\
-            --stdout \\
             --in1 ${prefix}.fastq.gz \\
             --thread $task.cpus \\
             --json ${prefix}.fastp.json \\
@@ -58,7 +57,6 @@ process FASTP {
         [ ! -f  ${prefix}.fastq.gz ] && ln -sf $reads ${prefix}.fastq.gz
 
         fastp \\
-            --stdout \\
             --in1 ${prefix}.fastq.gz \\
             --out1  ${prefix}.fastp.fastq.gz \\
             --thread $task.cpus \\
